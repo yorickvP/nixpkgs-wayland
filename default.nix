@@ -14,6 +14,11 @@ swaypkgs = {
     inherit (self.python3Packages) python pygobject3 pyxdg wrapPython;
     geoclue = self.geoclue2;
   };
+  swayContainer = self.dockerTools.buildImage {
+    name = "sway";
+    tag = "latest";
+    contents = [ swaypkgs.sway-beta self.mingetty ];
+  };
 };
 in
   swaypkgs // { inherit swaypkgs; }
