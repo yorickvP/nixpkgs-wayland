@@ -7,6 +7,10 @@ let
   };
 in
 {
-  
+  import "${pkgs}/nixos/lib/make-disk-image.nix" rec {
+    name = "nixos-wayland-${config.system.nixosLabel}";
+
+    config = machine.config;
+  }
 }
 
