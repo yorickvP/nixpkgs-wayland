@@ -34,6 +34,8 @@ in stdenv.mkDerivation rec {
     "-Dlibcap=enabled" "-Dlogind=enabled" "-Dxwayland=enabled" "-Dx11-backend=enabled"
     "-Dxcb-icccm=enabled" "-Dxcb-xkb=enabled" "-Dxcb-errors=enabled"
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   postInstall = ''
     # Install rootston (the reference compositor) to $bin and $examples

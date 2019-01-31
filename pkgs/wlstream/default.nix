@@ -34,6 +34,8 @@ stdenv.mkDerivation rec {
   mesonFlags = [
     "-Dauto_features=enabled"
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   meta = with stdenv.lib; {
     description = "wlroots-compatible screen capture application";

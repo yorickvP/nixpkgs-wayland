@@ -21,6 +21,8 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ pkgconfig meson ninja ];
   buildInputs = [ libevdev wlroots ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 

@@ -25,6 +25,8 @@ stdenv.mkDerivation rec {
     pixman libxkbcommon libudev mesa_noglu libX11
   ];
   mesonFlags = [ "-Dauto_features=enabled" ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 

@@ -18,6 +18,8 @@ stdenv.mkDerivation rec {
     rev = version;
     sha256 = metadata.sha256;
   };
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   nativeBuildInputs = [ pkgconfig meson ninja ];
   buildInputs = [

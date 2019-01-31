@@ -35,6 +35,8 @@ stdenv.mkDerivation rec {
     "-Dlogind=enabled"
     "-Dlogind-provider=systemd"
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 

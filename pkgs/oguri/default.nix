@@ -17,6 +17,8 @@ stdenv.mkDerivation rec {
     rev = version;
     sha256 = metadata.sha256;
   };
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   nativeBuildInputs = [ pkgconfig meson ninja ] ++ stdenv.lib.optional buildDocs [ scdoc ];
   buildInputs = [ cairo gtk3 wayland wayland-protocols ];

@@ -32,6 +32,8 @@ stdenv.mkDerivation rec {
     "-Dauto_features=enabled"
     "-Dout=$out"
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 

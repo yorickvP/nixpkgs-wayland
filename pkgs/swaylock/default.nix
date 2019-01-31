@@ -36,6 +36,8 @@ stdenv.mkDerivation rec {
     "-Dgdk-pixbuf=enabled"
     "-Dman-pages=enabled"
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 

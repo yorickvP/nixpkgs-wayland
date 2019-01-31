@@ -36,6 +36,8 @@ stdenv.mkDerivation rec {
     libjpeg libpng
     libGL
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 

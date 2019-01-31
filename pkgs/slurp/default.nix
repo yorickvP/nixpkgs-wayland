@@ -25,6 +25,8 @@ stdenv.mkDerivation rec {
   mesonFlags = [
     "-Dauto_features=enabled"
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 

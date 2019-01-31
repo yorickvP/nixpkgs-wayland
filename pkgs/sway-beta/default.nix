@@ -42,6 +42,8 @@ stdenv.mkDerivation rec {
     "-Dgdk-pixbuf=enabled"
     "-Dman-pages=enabled"
   ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   meta = with stdenv.lib; {
     description = "i3-compatible window manager for Wayland";

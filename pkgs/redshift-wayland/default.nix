@@ -36,6 +36,8 @@ stdenv.mkDerivation rec {
     wrapGAppsHook
     wrapPython
   ];
+  NIX_CFLAGS_COMPILE = "-g";
+  separateDebugInfo = true;
 
   configureFlags = [
     "--enable-randr=${if withRandr then "yes" else "no"}"

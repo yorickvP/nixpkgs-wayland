@@ -19,6 +19,8 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ pkgconfig meson ninja ];
   buildInputs = [ wayland wayland-protocols ];
+  separateDebugInfo = true;
+  mesonBuildType = "debugoptimized";
 
   enableParallelBuilding = true;
 
